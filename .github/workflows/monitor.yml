@@ -2,9 +2,11 @@ name: TSUS PP2 Admissions Watch
 
 on:
   schedule:
-    # Runs hourly. GitHub scheduled runs can be delayed during busy periods.
-    - cron: "3-58/5 * * * *"
+    - cron: "*/5 * * * *"
   workflow_dispatch:
+  push:
+    branches:
+      - main
 
 permissions:
   contents: write
